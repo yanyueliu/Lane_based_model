@@ -45,6 +45,9 @@ The coordinate network traffic signal optimization model based on CTM and LTM.
 <br><b>init_theta, init_phi, init_theta_upper, init_phi_upper:</b> Signal timing of all single intersections solved by CTM model which is used here as initial solution to improve efficiency of solving the model. If all of them are blank, the model will not use these as initial solutions, and solving the model may be very slow that a feasible solution may not be obtained in an hour.
 <br><b>input_chromo: </b> Genetic algorithm is used here to find optimal cycle. However, as the model is hard to solve in short time, this is not recommended to use.
 
+#### Notes
+About cycle_dict, the key of cycle_dict is node id of the intersection and value is cycle of traffic signal.
+
 ### readNetwork()
 ### initMovement()
 ### calibrate_all()
