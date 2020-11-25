@@ -10,7 +10,7 @@ Lane_based_model is a traffic signal optimization model based on the Cell Transm
 <br><b>node.csv:</b> All nodes, include intersections in the network. Node type 6 represents dead_ends and 0 represents intersection.
 <br><b>movement_calibration.csv: </b></br> Movement_calibration.csv provide the program about traffic flow into intersections and turning ratio of each movements.
 
-Where link.csv and node.csv have similar format with DTALite developed by Xuesong Zhou (https://github.com/xzhou99/Dtalite_traffic_assignment). 
+Where link.csv and node.csv have similar format with DTALite developed by Prof. Xuesong Zhou (https://github.com/xzhou99/Dtalite_traffic_assignment). 
 
 This program can automaticlly generate movement and confilct in intersections as long as regular network defined in link.csv. That is, if you define a non-regular intersection, such as an intersection has 5 arms, you must define movement of the intersection yourself.
 
