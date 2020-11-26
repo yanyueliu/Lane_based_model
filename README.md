@@ -10,7 +10,7 @@ Lane_based_model is a traffic signal optimization model based on the Cell Transm
 <br><b>node.csv:</b> All nodes, include intersections in the network. Node type 6 represents dead_ends and 0 represents intersection.
 <br><b>movement_calibration.csv: </b></br> Movement_calibration.csv provide the program about traffic flow into intersections and turning ratio of each movements.
 
-Where link.csv and node.csv have similar format with DTALite developed by Xuesong Zhou (https://github.com/xzhou99/Dtalite_traffic_assignment). 
+Where link.csv and node.csv have similar format with DTALite developed by Prof. Xuesong Zhou (https://github.com/xzhou99/Dtalite_traffic_assignment). 
 
 This program can automaticlly generate movement and confilct in intersections as long as regular network defined in link.csv. That is, if you define a non-regular intersection, such as an intersection has 5 arms, you must define movement of the intersection yourself.
 
@@ -38,12 +38,15 @@ One may focus on only an intersection to test the model. Line 905 and line 906 a
 <b>If isReturnVal is True:</b> objective value of the optimization model.
 <br><b>If isReturnVal is False:</b> Signal timing of all single intersections.
 
-### lp_optimize(c, bina, init_theta={}, init_phi={}, init_theta_upper={}, init_phi_upper={}, input_chromo=[], isReturn=False)
+### lp_optimize(c, init_theta={}, init_phi={}, init_theta_upper={}, init_phi_upper={}, input_chromo=[], isReturn=False)
 The coordinate network traffic signal optimization model based on CTM and LTM.
 #### Parameters
 <b>c:</b> Cycle of traffic signal. If cycle_dict is not defined. However, cycle_dict in the line 367 is strongly recommended to use.
 <br><b>init_theta, init_phi, init_theta_upper, init_phi_upper:</b> Signal timing of all single intersections solved by CTM model which is used here as initial solution to improve efficiency of solving the model. If all of them are blank, the model will not use these as initial solutions, and solving the model may be very slow that a feasible solution may not be obtained in an hour.
 <br><b>input_chromo: </b> Genetic algorithm is used here to find optimal cycle. However, as the model is hard to solve in short time, this is not recommended to use.
+
+#### Notes
+About cycle_dict, the key of cycle_dict is node id of the intersection and value is cycle of traffic signal.
 
 ### readNetwork()
 ### initMovement()
