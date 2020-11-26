@@ -38,7 +38,7 @@ One may focus on only an intersection to test the model. Line 905 and line 906 a
 <b>If isReturnVal is True:</b> objective value of the optimization model.
 <br><b>If isReturnVal is False:</b> Signal timing of all single intersections.
 
-### lp_optimize(c, bina, init_theta={}, init_phi={}, init_theta_upper={}, init_phi_upper={}, input_chromo=[], isReturn=False)
+### lp_optimize(c, init_theta={}, init_phi={}, init_theta_upper={}, init_phi_upper={}, input_chromo=[], isReturn=False)
 The coordinate network traffic signal optimization model based on CTM and LTM.
 #### Parameters
 <b>c:</b> Cycle of traffic signal. If cycle_dict is not defined. However, cycle_dict in the line 367 is strongly recommended to use.
